@@ -1,6 +1,12 @@
 name: Example Workflow
 
-on: [push]
+on: 
+  workflow_dispatch:
+    inputs:
+      build-input:
+        description: 'optional_input'     
+        required: false
+        default: 'optional_input' # does nothing now but could be useful later
 
 jobs:
   build:
